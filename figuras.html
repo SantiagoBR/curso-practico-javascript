@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras geométricas  |  Curso Práctico de Javascript en Platzi</title>
+</head>
+<body>
+    <header class="main-header">
+        <h2 class="main-header__title">
+            CALCULA DISTINTAS MEDIDAS DE LAS FIGURAS
+        </h2>
+    </header>
+
+    <section class="frame-container">
+        <header class="frame-container__header">
+            <figure class="header__figure">
+                <img src="" alt="cuadrado" class="header__figure--img">
+            </figure>
+            <h3 class="header__title">cuadrado</h3>
+        </header>
+        <p class="frame-container__p">¿Cuánto mide cada lado del cuadrado?</p>
+        <form class="frame-container__form">
+            <label for="FrameInput" class="form__label">
+                Lado
+            </label>
+            <input id="FrameInput" type="number" class="form__input"/>
+            <select name="measure" id="measure" class="form__select">
+                <option value="cm" class="form__select--option">cm</option>
+                <option value="m" class="form__select--option">m</option>
+            </select>
+            <button type="button" onclick="calcFramePerimeter()" class="form__button--perimeter">
+                Perímetro
+            </button>
+            <button type="button" onclick="calcFrameArea()" class="form__button--area">
+                Área
+            </button>
+        </form>
+        <div class="frame-container__result">
+            <p class="frame-container__result--p"></p>
+        </div>
+    </section>
+    <script src="./figuras.js"></script>
+</body>
+</html> 
