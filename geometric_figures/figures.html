@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras geométricas  |  Curso Práctico de Javascript en Platzi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/figuras.css">
+    <link rel="stylesheet" href="./css/figuras_desktop.css" media="screen and (min-width: 1200px)">
+</head>
+<body>
+    <header class="main-header">
+        <h2 class="main-header__title">
+            CALCULA MEDIDAS GEOMÉTRICAS
+        </h2>
+    </header>
+    <main class="main-container">
+        <!-- Square section -->
+        <section class="container square-container">
+            <header class="container__header">
+                <figure class="header__figure">
+                    <img src="./img/square.svg" alt="">
+                </figure>
+                <h3 class="header__title">cuadrado</h3>
+            </header>
+            <em>
+                <p class="container__p">¿Cuánto mide cada lado del cuadrado?</p>
+            </em>
+            <form class="square-form-container">
+                <div class="square-form-container__wrapper">
+                    <div class="form__input-container">
+                        <label for="SquareInput" class="form__label">
+                            Lado
+                        </label>
+                        <input id="SquareInput" type="number" class="form__input"/>
+                    </div>            
+                    <select name="measure" id="measure" class="form__select">
+                        <option value="cm" class="form__select--option">cm</option>
+                        <option value="m" class="form__select--option">m</option>
+                    </select>
+                </div>
+                <button type="button" onclick="calcSquarePerimeter()" class="form__button">
+                    Perímetro
+                </button>
+                <button type="button" onclick="calcSquareArea()" class="form__button">
+                    Área
+                </button>
+            </form>
+            <p class="container__result--p" id="SquareOutput"></p>
+        </section>
+        <!-- Triangle section -->
+        <section class="container triangle-container">
+            <header class="container__header">
+                <figure class="header__figure">
+                    <img src="./img/triangle.svg" alt="">
+                </figure>
+                <h3 class="header__title">triángulo isósceles</h3>
+            </header>
+            <em>
+                <p class="container__p">¿Cuánto mide cada lado del triángulo "isósceles"?</p>
+            </em>
+            <form class="square-container__form">
+                <div class="square-form-container__wrapper--triangle">
+                    <div class="form__input-container form__input-container--triangle">
+                        <label for="TriangleInput1" class="form__label">
+                            Lados
+                        </label>
+                        <input id="TriangleInput1" type="number" class="form__input"/>
+                    </div>
+                    <div class="form__input-container form__input-container--triangle">
+                        <label for="TriangleInput2" class="form__label">
+                            Base 
+                        </label>
+                        <input id="TriangleInput2" type="number" class="form__input"/>                
+                    </div>
+                    <select name="measure2" id="measure2" class="form__select triangle_select">
+                        <option value="cm" class="form__select--option">cm</option>
+                        <option value="m" class="form__select--option">m</option>
+                    </select>
+                </div>
+                <button type="button" onclick="calcTrianglePerimeter()" class="form__button">
+                    Perímetro
+                </button>
+                <button type="button" onclick="calcTriangleArea()" class="form__button">
+                    Área
+                </button>
+            </form>
+            <p class="container__result--p" id="triangleOutput"></p>
+        </section>
+        <!-- Circle section -->
+        <section class="container circle-container">
+            <header class="container__header">
+                <figure class="header__figure">
+                    <img src="./img/circle.svg" alt="">
+                </figure>
+                <h3 class="header__title">circunferencia</h3>
+            </header>
+            <em>
+                <p class="container__p">¿Cuánto mide el radio de la circunferencia?</p>
+            </em>
+            <form class="circle-container__form">
+                <div class="square-form-container__wrapper">
+                    <div class="form__input-container">
+                        <label for="circleInput" class="form__label">
+                            Radio
+                        </label>
+                        <input id="circleInput" type="number" class="form__input"/>            
+                    </div>
+                    <select name="measure3" id="measure3" class="form__select">
+                        <option value="cm" class="form__select--option">cm</option>
+                        <option value="m" class="form__select--option">m</option>
+                    </select>            
+                </div>
+                <button type="button" onclick="calcCirclePerimeter()" class="form__button">
+                    Perímetro
+                </button>
+                <button type="button" onclick="calcCircleDiameter()" class="form__button">
+                    Diámetro
+                </button>
+                <button type="button" onclick="calcCircleArea()" class="form__button">
+                    Área
+                </button>
+            </form>
+            <p class="container__result--p" id="circleOutput"></p>
+        </section>
+    </main>
+    <script src="./figuras.js"></script>
+</body>
+</html> 
