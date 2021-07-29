@@ -1,8 +1,6 @@
 function calcPriceWithDiscount(price, coupon) {
     const percentageCode = discountCoupon(coupon)
     const percentageWithDiscount = 100 - percentageCode
-    console.log(percentageCode)
-    console.log(percentageWithDiscount)
     const priceWithDiscount = (price * percentageWithDiscount) / 100
 
     return priceWithDiscount
@@ -24,21 +22,21 @@ function priceDiscountBtn ()
 }
 
 function discountCoupon (code) {
-    let promotionDiscount 
+    let discount 
 
     switch (code) {
         case 'promocion-15':
-            return promotionDiscount = 15
+            return discount = 15
             break;
         case 'promocion-30':
-            return promotionDiscount = 30
+            return discount = 30
             break;
         case 'promocion-50':
-            return promotionDiscount = 50
+            return discount = 50
             break;
     
         default: 
-            return promotionDiscount = 0
+            return discount = 0
             break;
     }
 }
