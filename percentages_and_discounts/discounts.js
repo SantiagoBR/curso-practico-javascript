@@ -6,21 +6,6 @@ function calcPriceWithDiscount(price, coupon) {
     return priceWithDiscount
 }
 
-
-function priceDiscountBtn () 
-{
-    const PriceInput = document.getElementById('PriceInput')
-    const priceValue = PriceInput.value
-    
-    const CouponInput = document.getElementById('CouponInput')
-    const couponValue = CouponInput.value
-
-    const priceWithDiscount = calcPriceWithDiscount(priceValue, couponValue)
-
-    const PriceOutput = document.getElementById('PriceOutput')
-    PriceOutput.innerText = `El precio con descuento es:  $${priceWithDiscount}`
-}
-
 function discountCoupon (code) {
     let discount 
 
@@ -39,4 +24,18 @@ function discountCoupon (code) {
             return discount = 0
             break;
     }
+}
+
+function priceDiscountBtn () 
+{
+    const PriceInput = document.getElementById('PriceInput')
+    const priceValue = PriceInput.value
+    
+    const CouponInput = document.getElementById('CouponInput')
+    const couponValue = CouponInput.value
+
+    const priceWithDiscount = calcPriceWithDiscount(priceValue, couponValue)
+
+    const PriceOutput = document.getElementById('PriceOutput')
+    PriceOutput.innerText = `El precio con descuento es:  $${priceWithDiscount}`
 }

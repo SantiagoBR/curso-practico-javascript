@@ -5,29 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DISCOUNTS | SBR Personal Project</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles-desktop.css" media="screen and (min-width: 1200px)">
 </head>
 <body>
-    <header>
-        <h1>PERCENTAGES AND DISCOUNTS</h1>
+    <header class="main-header">
+        <h1 class="main-header__title">PERCENTAGES AND DISCOUNTS</h1>
     </header>
+    <main class="main-container">
+        <section class="main-container__section">
+            <h2 class="main-container__section--title">
+                Calcula el precio a pagar de tus productos con descuento.
+            </h2>
     
-    <section>
-        <h2>
-            Calcula el precio a pagar de tus productos con descuento.
-        </h2>
-
-        <form action="">
-            <label for="PriceInput">Escribe el precio de tu producto</label>
-            <input type="number" name="" id="PriceInput">
-
-            <label for="CouponInput">Escribe el código de tu cupón</label>
-            <input type="text" name="" id="CouponInput">
-
-            <button type="button" onclick="priceDiscountBtn()">CALCULAR</button>
-
-            <p id="PriceOutput"></p>
-        </form>
-    </section>
+            <form class="main-container__section--form" >
+                <label for="PriceInput">
+                    Escribe el precio de tu producto
+                </label>
+                <input type="number" name="" id="PriceInput">
+    
+                <label for="CouponInput">Escribe el código de tu cupón</label>
+                <input type="text" name="" id="CouponInput">
+    
+                <button type="button" onclick="priceDiscountBtn()">CALCULAR</button>
+    
+                <p id="PriceOutput"></p>
+            </form>
+        </section>
+    </main>
 
     <script src="./discounts.js"></script>
 </body>
