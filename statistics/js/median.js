@@ -7,6 +7,8 @@ function calcArithmeticAverage(list) {
 }
 
 function calcMedian(list) {
+  const listArray = list.split(',')
+
   function isPair(num) {
     if (num % 2 === 0) {
       return true;
@@ -15,14 +17,14 @@ function calcMedian(list) {
     }
   }
 
-  const ordainedList = list.sort((a, b) => a - b)
+  const ordainedList = listArray.sort((a, b) => a - b)
 
   const listMiddle = parseInt(ordainedList.length / 2);
   let median;
-
+  
   if (isPair(ordainedList.length)) {
-    const element1 = ordainedList[listMiddle - 1];
-    const element2 = ordainedList[listMiddle];
+    const element1 = parseInt(ordainedList[listMiddle - 1]);
+    const element2 = parseInt(ordainedList[listMiddle]);
 
     const average_Element1_Element2 = calcArithmeticAverage([
       element1,
@@ -35,4 +37,15 @@ function calcMedian(list) {
   }
 
   return median;
+}
+
+function calcMedianBtn () {
+  const inputMedian = document.getElementById('inputMedian')
+  const outputMedian = document.getElementById('outputMedian')
+
+  const list = inputMedian.value
+
+  const median = calcMedian(list)
+
+  outputMedian.innerText = `La mediana de tu lista es ${median}`
 }
